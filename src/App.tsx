@@ -1,21 +1,16 @@
 import React from "react";
-import { Route, Switch, useLocation } from "react-router-dom";
-import Nav from "./components/Nav";
+import { Route, Switch } from "react-router-dom";
 import Home from "./pages/index";
-import ProjectList from "./pages/ProjectList";
 
-const App: React.FC = () => {
-  const location = useLocation();
-
+function App() {
   return (
-    <div className={"bg-black text-white min-h-screen"}>
-      <Nav path={location.pathname} />
+    <div className="App">
       <Route exact path="/" component={Home} />
       <Switch>
-        <Route exact path={`/project-list`} component={ProjectList} />
+        {/* <Route exact path={`/project-list`} component={ProjectList} /> */}
       </Switch>
     </div>
   );
-};
+}
 
 export default App;

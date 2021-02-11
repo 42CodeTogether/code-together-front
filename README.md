@@ -5,7 +5,9 @@
 <div algin="center">
 	<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" height="24px"/>
 	<img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB" height="24px"/>
-	<img alt="TailwindCSS" src="https://img.shields.io/badge/tailwindcss%20-%2338B2AC.svg?&style=for-the-badge&logo=tailwind-css&logoColor=white" height="24px"/>
+	<img alt="SASS" src="https://img.shields.io/badge/SASS%20-hotpink.svg?&style=for-the-badge&logo=SASS&logoColor=white" height="24px"/>
+	<img alt="StoryBook" src="https://img.shields.io/badge/storybook%20-%2326077C.svg?&style=for-the-badge&logo=storybook&logoColor=%23E06A8C" height="24px"/>
+	<img alt="Vercel" src="https://img.shields.io/badge/vercel%20-%23000000.svg?&style=for-the-badge&logo=vercel&logoColor=white" height="24px"/>
 </div>
 
 ## 🚩 Project Goal

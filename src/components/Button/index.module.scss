@@ -1,41 +1,50 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixin.scss";
+
 .wrapper {
   outline: none;
   border: none;
   box-sizing: border-box;
-  height: 2rem;
   font-size: 0.875rem;
+  height: 2rem;
   padding: 0.5rem 1rem;
   color: white;
   line-height: 1;
   font-weight: 600;
-  transition-property: background-color, border-color, color, fill, stroke,
-    opacity, box-shadow, transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  vertical-align: middle;
+
+  &:disabled {
+    filter: brightness(80%);
+    cursor: not-allowed;
+  }
 }
 
 .primary {
-  color: white;
-  background: #00babc;
+  color: $white;
+  background: $primary;
   &:hover {
-    background: #00dde0;
+    background: $primary-hover;
   }
   &:active {
-    background: #00787a;
+    background: $primary-active;
   }
 }
 
 .secondary {
-  color: #000000;
-  background: #ffffff;
+  color: $black;
+  background: $secondary;
   &:hover {
-    background: #e0e0e0;
+    background: $secondary-hover;
   }
   &:active {
-    background: #7a7a7a;
+    background: $secondary-active;
   }
 }
 
 .radius {
   border-radius: 0.25rem;
+}
+
+.transition {
+  @include transition;
 }

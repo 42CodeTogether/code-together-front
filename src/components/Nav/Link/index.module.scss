@@ -5,62 +5,42 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/12 17:51:29 by jaeskim           #+#    #+#             */
-/*   Updated: 2021/02/12 23:04:41 by jaeskim          ###   ########.fr       */
+/*   Created: 2021/02/12 21:36:15 by jaeskim           #+#    #+#             */
+/*   Updated: 2021/02/12 22:53:27 by jaeskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-@import "../../styles/variables.scss";
-@import "../../styles/mixin.scss";
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixin.scss";
 
 .wrapper {
   outline: none;
   border: none;
   box-sizing: border-box;
-  @include text-md;
+  @include text-lg;
   @include font-bold;
+  text-decoration: unset;
   padding: 0.5rem 1rem;
+  margin: auto 0;
   color: white;
   vertical-align: middle;
+  @include transition;
 
   &:disabled {
     filter: brightness(80%);
     cursor: not-allowed;
   }
-}
-
-.primary {
-  color: $white;
-  background: $primary;
   &:hover {
-    background: $primary-hover;
+    color: $primary;
+    text-decoration: underline;
   }
   &:active {
-    background: $primary-active;
-  }
-  &:disabled {
-    background: $primary;
+    color: $primary-active;
+    text-decoration: underline;
   }
 }
 
-.secondary {
-  color: $black;
-  background: $secondary;
-  &:hover {
-    background: $secondary-hover;
-  }
-  &:active {
-    background: $secondary-active;
-  }
-  &:disabled {
-    background: $secondary;
-  }
-}
-
-.round {
-  border-radius: 0.25rem;
-}
-
-.transition {
-  @include transition;
+.active {
+  color: $primary;
+  text-decoration: underline;
 }

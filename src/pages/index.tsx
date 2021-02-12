@@ -1,10 +1,13 @@
 import React from "react";
-import Button from "../components/Button";
+import Nav from "../components/Nav";
 
-const Home: React.FC = () => {
+export type HomeProps = {};
+
+/** `/` Main에 해당 하는 Page Component 입니다. */
+const Home: React.FC<HomeProps> = () => {
   return (
     <div>
-      home<Button>test</Button>
+      <Nav />
     </div>
   );
 };

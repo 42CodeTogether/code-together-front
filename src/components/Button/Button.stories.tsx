@@ -5,7 +5,7 @@ import { action } from "@storybook/addon-actions";
 import Button, { ButtonProps } from ".";
 
 export default {
-  title: "Example/Button",
+  title: "Component/Button",
   component: Button,
 } as Meta;
 
@@ -31,6 +31,13 @@ RadiusButton.args = {
   radius: true,
 } as ButtonProps;
 
+export const DisableButton = Template.bind({});
+DisableButton.args = {
+  children: "BUTTON",
+  onClick: action("onClick"),
+  disabled: true,
+} as ButtonProps;
+
 export const FullWidthButton = Template.bind({});
 FullWidthButton.args = {
   children: "BUTTON",
@@ -43,4 +50,18 @@ FullHeightButton.args = {
   children: "BUTTON",
   onClick: action("onClick"),
   height: "100%",
+} as ButtonProps;
+
+export const NonTranstionButton = Template.bind({});
+NonTranstionButton.args = {
+  children: "BUTTON",
+  onClick: action("onClick"),
+  transition: false,
+} as ButtonProps;
+
+export const CustionStyleButton = Template.bind({});
+CustionStyleButton.args = {
+  children: "BUTTON",
+  onClick: action("onClick"),
+  className: "Custom Class Name",
 } as ButtonProps;

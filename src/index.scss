@@ -1,2 +1,9 @@
 @import "~normalize-scss/sass/normalize";
 @include normalize();
+
+@import "./styles/variables.scss";
+@import "./styles/mixin.scss";
+
+html {
+  background: $black;
+}

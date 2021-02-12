@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Button.stories.tsx                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/12 17:51:26 by jaeskim           #+#    #+#             */
+/*   Updated: 2021/02/12 17:58:00 by jaeskim          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 import { action } from "@storybook/addon-actions";
 
-import Button, { ButtonProps } from ".";
+import Button, { ButtonProps } from "./index";
 
 export default {
   title: "Component/Button",
@@ -24,11 +36,11 @@ SecondaryButton.args = {
   them: "secondary",
 } as ButtonProps;
 
-export const RadiusButton = Template.bind({});
-RadiusButton.args = {
+export const RoundButton = Template.bind({});
+RoundButton.args = {
   children: "BUTTON",
   onClick: action("onClick"),
-  radius: true,
+  round: true,
 } as ButtonProps;
 
 export const DisableButton = Template.bind({});

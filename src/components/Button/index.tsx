@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   index.tsx                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/12 17:51:31 by jaeskim           #+#    #+#             */
+/*   Updated: 2021/02/12 23:18:37 by jaeskim          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 import React from "react";
 import styles from "./index.module.scss";
 
@@ -8,8 +20,8 @@ export type ButtonProps = {
   onClick?: (e: React.MouseEvent) => any;
   /** Button 테마에 대하여 정의 */
   them?: "primary" | "secondary";
-  /** Button radius 활성화에 대하여 정의 */
-  radius?: boolean;
+  /** Button round 활성화에 대하여 정의 */
+  round?: boolean;
   /** Button width에 대하여 정의 */
   width?: string | number;
   /** Button height 대하여 정의 */
@@ -27,7 +39,7 @@ const Button: React.FC<ButtonProps> = ({
   children,
   onClick,
   them = "primary",
-  radius = false,
+  round = false,
   width,
   height,
   transition = true,
@@ -36,9 +48,9 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`${styles.wrapper} ${styles[them]} ${
-        radius && styles.radius
-      } ${transition && styles.transition} ${className}`}
+      className={`${styles.wrapper} ${styles[them]} ${round && styles.round} ${
+        transition && styles.transition
+      } ${className}`}
       style={{
         width,
         height,

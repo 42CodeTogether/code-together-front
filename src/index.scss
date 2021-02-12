@@ -6,4 +6,6 @@
 
 html {
   background: $black;
+  @include font-sans;
+  font-size: 14px;
 }

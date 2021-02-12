@@ -24,11 +24,11 @@ SecondaryButton.args = {
   them: "secondary",
 } as ButtonProps;
 
-export const RadiusButton = Template.bind({});
-RadiusButton.args = {
+export const RoundButton = Template.bind({});
+RoundButton.args = {
   children: "BUTTON",
   onClick: action("onClick"),
-  radius: true,
+  round: true,
 } as ButtonProps;
 
 export const DisableButton = Template.bind({});

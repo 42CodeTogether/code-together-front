@@ -9,3 +9,16 @@ html {
   @include font-sans;
   font-size: 14px;
 }
+
+.App {
+  color: $white;
+  @include mobile {
+    margin-top: 4rem;
+  }
+  @include tablet {
+    margin-top: 3rem;
+  }
+  @include desktop {
+    margin-top: 3.5rem;
+  }
+}

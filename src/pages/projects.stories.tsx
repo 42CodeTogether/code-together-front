@@ -2,12 +2,12 @@ import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 import storyRouterDecorator from "storybook-react-router";
 
-import HomePage, { HomePageProps } from "./index";
+import ProjectsPage, { ProjectsPageProps } from "./projects";
 import Nav from "../components/Nav";
 
 export default {
-  title: "Page/HomePage",
-  component: HomePage,
+  title: "Page/ProjectsPage",
+  component: ProjectsPage,
   subcomponents: { Nav },
   parameters: {
     docs: {
@@ -17,7 +17,7 @@ export default {
   decorators: [storyRouterDecorator()],
 } as Meta;
 
-const Template: Story<HomePageProps> = (args) => <HomePage {...args} />;
+const Template: Story<ProjectsPageProps> = (args) => <ProjectsPage {...args} />;
 
 export const LoggedIn = Template.bind({});
-LoggedIn.args = {} as HomePageProps;
+LoggedIn.args = {} as ProjectsPageProps;

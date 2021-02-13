@@ -6,17 +6,18 @@
 /*   By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 17:51:22 by jaeskim           #+#    #+#             */
-/*   Updated: 2021/02/12 23:18:03 by jaeskim          ###   ########.fr       */
+/*   Updated: 2021/02/13 18:17:45 by jaeskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 import React from "react";
+import { useHistory } from "react-router-dom";
 import Button from "../Button";
 import styles from "./index.module.scss";
 import logoSvg from "../../assets/logo_white.svg";
 import logo42Svg from "../../assets/42_logo_black.svg";
 import Link from "./Link";
-import { useHistory } from "react-router-dom";
+import useResponsive from "../../utils/useResponsive";
 
 export type NavProps = {};
 
@@ -26,6 +27,7 @@ export type NavProps = {};
  */
 const Nav: React.FC<NavProps> = () => {
   const history = useHistory();
+  const media = useResponsive();
   return (
     <div className={`${styles.wrapper} `}>
       <img
@@ -35,15 +37,21 @@ const Nav: React.FC<NavProps> = () => {
         onClick={() => history.push("/")}
       />
       <div className={`${styles.buttonContainer}`}>
-        <Link to={"/projects"}>Project List</Link>
-        <Button
-          height="100%"
-          className={`${styles.loginButton}`}
-          onClick={() => history.push("/login")}
-        >
-          <img src={logo42Svg} alt={"42logo"} />
-          Login
-        </Button>
+        {media.isMobile ? (
+          <div>isMobile</div>
+        ) : (
+          <>
+            <Link to={"/projects"}>Project List</Link>
+            <Button
+              height="100%"
+              className={`${styles.loginButton}`}
+              onClick={() => history.push("/login")}
+            >
+              <img src={logo42Svg} alt={"42logo"} />
+              Login
+            </Button>
+          </>
+        )}
       </div>
     </div>
   );

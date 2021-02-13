@@ -6,7 +6,7 @@
 /*   By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 17:45:06 by jaeskim           #+#    #+#             */
-/*   Updated: 2021/02/12 19:11:13 by jaeskim          ###   ########.fr       */
+/*   Updated: 2021/02/13 18:20:37 by jaeskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@
 }
 
 @mixin mobile {
-  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+  // TODO: Mobile Size 재조정 필요.
+  // @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px})
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
     @content;
   }
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/12 17:51:29 by jaeskim           #+#    #+#             */
-/*   Updated: 2021/02/13 16:13:06 by jaeskim          ###   ########.fr       */
+/*   Created: 2021/02/13 12:41:12 by jaeskim           #+#    #+#             */
+/*   Updated: 2021/02/13 16:14:17 by jaeskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,49 +14,11 @@
 @import "../../styles/mixin.scss";
 
 .wrapper {
-  outline: none;
-  border: none;
-  box-sizing: border-box;
-  @include text-md;
-  @include font-bold;
-  padding: 0.5rem 1rem;
-  color: white;
-  vertical-align: middle;
-
-  &:disabled {
-    filter: brightness(80%);
-    cursor: not-allowed;
-  }
-}
-
-.primary {
+  padding: 1rem 1rem;
   color: $white;
-  background: $primary;
-  &:hover {
-    background: $primary-hover;
-  }
-  &:active {
-    background: $primary-active;
-  }
-  &:disabled {
-    background: $primary;
-  }
+  background: $cover;
 }
 
-.secondary {
-  color: $black;
-  background: $secondary;
-  &:hover {
-    background: $secondary-hover;
-  }
-  &:active {
-    background: $secondary-active;
-  }
-  &:disabled {
-    background: $secondary;
-  }
-}
-
-.transition {
-  @include transition;
+.round {
+  border-radius: 0.25rem;
 }

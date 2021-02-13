@@ -1,15 +1,11 @@
 import React from "react";
-import Nav from "../components/Nav";
+import styles from "./index.module.scss";
 
-export type HomeProps = {};
+export type HomePageProps = {};
 
 /** `/` Main에 해당 하는 Page Component 입니다. */
-const Home: React.FC<HomeProps> = () => {
-  return (
-    <div>
-      <Nav />
-    </div>
-  );
+const HomePage: React.FC<HomePageProps> = () => {
+  return <div className={`${styles.wrapper}`}></div>;
 };
 
-export default Home;
+export default HomePage;

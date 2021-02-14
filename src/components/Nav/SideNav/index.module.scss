@@ -1,0 +1,91 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   index.module.scss                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/14 00:27:55 by jaeskim           #+#    #+#             */
+/*   Updated: 2021/02/14 18:31:36 by jaeskim          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixin.scss";
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  background: $white;
+  box-sizing: border-box;
+  color: $black;
+
+  animation: fadein 0.25s;
+}
+
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  padding-left: 0rem;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.child {
+  display: flex;
+  margin: auto 0;
+  cursor: pointer;
+  margin: 1rem 0;
+  @include text-4xl;
+  @include font-extrabold;
+  @include transition;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.logo {
+  height: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.loginButton {
+  display: flex;
+  color: $black;
+  height: 4rem;
+  margin-top: 1rem;
+  @include text-2xl;
+  @include font-bold;
+  white-space: nowrap;
+  align-items: center;
+  img {
+    height: 2.5rem;
+    box-sizing: border-box;
+    margin-right: 1rem;
+  }
+}
+
+.text-white {
+  color: $black;
+}

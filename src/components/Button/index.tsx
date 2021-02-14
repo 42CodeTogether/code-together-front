@@ -6,7 +6,7 @@
 /*   By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 17:51:31 by jaeskim           #+#    #+#             */
-/*   Updated: 2021/02/12 23:18:37 by jaeskim          ###   ########.fr       */
+/*   Updated: 2021/02/14 00:33:47 by jaeskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ export type ButtonProps = {
   /** Click시 호출 할 함수에 대하여 정의 */
   onClick?: (e: React.MouseEvent) => any;
   /** Button 테마에 대하여 정의 */
-  them?: "primary" | "secondary";
+  them?: "primary" | "secondary" | "transparent";
   /** Button round 활성화에 대하여 정의 */
   round?: boolean;
   /** Button width에 대하여 정의 */

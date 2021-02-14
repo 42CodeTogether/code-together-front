@@ -6,7 +6,7 @@
 /*   By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 17:51:26 by jaeskim           #+#    #+#             */
-/*   Updated: 2021/02/13 12:34:15 by jaeskim          ###   ########.fr       */
+/*   Updated: 2021/02/14 00:37:07 by jaeskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,13 @@ SecondaryButton.args = {
   children: "BUTTON",
   onClick: action("onClick"),
   them: "secondary",
+} as ButtonProps;
+
+export const TransparentButton = Template.bind({});
+TransparentButton.args = {
+  children: "BUTTON",
+  onClick: action("onClick"),
+  them: "transparent",
 } as ButtonProps;
 
 export const RoundButton = Template.bind({});

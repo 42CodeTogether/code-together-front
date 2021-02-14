@@ -6,7 +6,7 @@
 /*   By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 17:51:29 by jaeskim           #+#    #+#             */
-/*   Updated: 2021/02/13 16:13:06 by jaeskim          ###   ########.fr       */
+/*   Updated: 2021/02/14 17:32:56 by jaeskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@
   @include text-md;
   @include font-bold;
   padding: 0.5rem 1rem;
-  color: white;
+  color: $black;
   vertical-align: middle;
+  cursor: pointer;
 
   &:disabled {
     filter: brightness(80%);
@@ -30,7 +31,6 @@
 }
 
 .primary {
-  color: $white;
   background: $primary;
   &:hover {
     background: $primary-hover;
@@ -44,7 +44,6 @@
 }
 
 .secondary {
-  color: $black;
   background: $secondary;
   &:hover {
     background: $secondary-hover;
@@ -55,6 +54,11 @@
   &:disabled {
     background: $secondary;
   }
+}
+
+.transparent {
+  color: $white;
+  background: none;
 }
 
 .transition {

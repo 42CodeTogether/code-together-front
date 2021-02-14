@@ -6,7 +6,7 @@
 /*   By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 21:34:16 by jaeskim           #+#    #+#             */
-/*   Updated: 2021/02/12 23:44:34 by jaeskim          ###   ########.fr       */
+/*   Updated: 2021/02/14 19:35:02 by jaeskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ import React from "react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import styles from "./index.module.scss";
 
-type LocationDescriptor<S = unknown> = {
+export type LocationDescriptor<S = unknown> = {
   pathname?: string;
   search?: string;
   state?: S;
@@ -23,6 +23,8 @@ type LocationDescriptor<S = unknown> = {
 };
 
 export type LinkProps<S = unknown> = {
+  /** Link Component의 고유 Key id로 사용 */
+  id: string;
   /** Link 안의 내용에 대하여 정의 */
   children?: React.ReactNode;
   /** 클릭시 이동 될 경로에 대하여 정의 */

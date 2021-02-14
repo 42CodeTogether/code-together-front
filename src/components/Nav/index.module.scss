@@ -6,7 +6,7 @@
 /*   By: jaeskim <jaeskim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 17:51:38 by jaeskim           #+#    #+#             */
-/*   Updated: 2021/02/13 18:15:48 by jaeskim          ###   ########.fr       */
+/*   Updated: 2021/02/14 18:29:39 by jaeskim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
   display: flex;
   padding-left: 3rem;
   @include mobile {
-    height: 4rem;
+    height: 5rem;
     padding-left: 0rem;
   }
   @include tablet {
@@ -40,6 +40,7 @@
   height: 100%;
   padding: 0 1rem;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .buttonContainer {
@@ -58,7 +59,7 @@
     font-size: 1rem;
   }
   img {
-    height: 100%;
+    height: 1.5rem;
     box-sizing: border-box;
     margin-right: 0.125rem;
   }
